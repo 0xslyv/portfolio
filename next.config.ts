@@ -30,6 +30,12 @@ const withNextIntl = createNextIntlPlugin({
 const nextConfig: NextConfig = {
   // Config options here
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  outputFileTracingIncludes: {
+    '/*': [
+      './src/app/[locale]/blog/personal/posts/**/*.mdx',
+      './src/app/[locale]/blog/technology/posts/**/*.mdx',
+    ],
+  },
 };
  
 const withMDX = createMDX({

@@ -5,13 +5,17 @@ import { formatDate, getPersonalPosts } from '../../utils'
 import { baseUrl } from '@/app/sitemap'
 import Link from "next/link"
 import { MdArrowOutward } from "react-icons/md"
+import { routing } from '@/i18n/routing'
 
 export async function generateStaticParams() {
   let posts = getPersonalPosts()
 
-  return posts.map((post) => ({
-    slug: post.slug,
-  }))
+  return routing.locales.flatMap((locale) =>
+    posts.map((post) => ({
+      locale,
+      slug: post.slug,
+    }))
+  )
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string; slug: string }> }) {
