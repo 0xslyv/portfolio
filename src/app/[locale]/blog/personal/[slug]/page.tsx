@@ -6,7 +6,7 @@ import { baseUrl } from '@/app/sitemap'
 import Link from "next/link"
 import { MdArrowOutward } from "react-icons/md"
 import { routing } from '@/i18n/routing'
-import { useExtracted } from 'next-intl'
+import { getExtracted } from 'next-intl/server'
 
 export async function generateStaticParams() {
   let posts = getPersonalPosts()
@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default async function Blog({ params }: { params: Promise<{ locale: string; slug: string }> }) {
-  const t = useExtracted('commons');
+  const t = await getExtracted('commons');
   const { slug } = await params
   let post = getPersonalPosts().find((post) => post.slug === slug)
 

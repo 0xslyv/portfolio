@@ -6,6 +6,7 @@ import { baseUrl } from '@/app/sitemap'
 import Link from "next/link"
 import { MdArrowOutward } from "react-icons/md"
 import { routing } from '@/i18n/routing'
+import { getExtracted } from 'next-intl/server'
 
 export async function generateStaticParams() {
   let posts = getTechPosts()
@@ -60,6 +61,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default async function Blog({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const t = await getExtracted('commons');
   const { slug } = await params
   let post = getTechPosts().find((post) => post.slug === slug)
 
@@ -101,7 +103,7 @@ export default async function Blog({ params }: { params: Promise<{ locale: strin
               </h1>
               <Link href={`/blog/technology`} className="flex bg-hover/80 p-3 rounded-lg transition-all duration-200 border border-theme-color/30 cursor-pointer hover:bg-theme-color/10 items-center gap-2">
                 <MdArrowOutward className="inline" />
-                Back to Tech Blog
+                {t('Back to Tech Blog')} 
               </Link>
             </div>
 
