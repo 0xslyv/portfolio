@@ -17,7 +17,7 @@ export default function Profile() {
                 glareSize={300}
                 transitionDuration={800}
                 playOnce={false}
-                className="p-8 md:p-10 rounded-sm bg-main/50 w-full flex items-center justify-center"
+                className="p-8 md:p-10 rounded-sm bg-main/65 w-full flex items-center justify-center"
             >
                 <div className='flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 animate-swipe-in'>
                     <div className="aspect-square w-40 h-40 md:w-50 md:h-50 rounded-full border-2 border-theme-color flex items-center justify-center bg-main/50">
