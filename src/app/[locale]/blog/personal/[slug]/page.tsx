@@ -25,7 +25,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   if (!post) {
     return
   }
-
   let {
     title,
     publishedAt: publishedTime,
@@ -45,9 +44,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: 'article',
       publishedTime,
       url: `${baseUrl}/blog/personal/${post.slug}`,
+      siteName: title,
       images: [
         {
           url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: title,
         },
       ],
     },
@@ -72,7 +75,7 @@ export default async function Blog({ params }: { params: Promise<{ locale: strin
   return (
     <section className="relative min-h-screen w-full overflow-hidden p-8 md:p-10 flex items-start justify-center pt-20">
       <div className="w-full max-w-4xl animate-swipe-in">
-        <div className="border border-subtle bg-background rounded-lg py-5 mb-50 bg-main/90 w-full max-h-[calc(100vh-200px)] overflow-y-auto pb-8 scrollbar-thin scrollbar-thumb-theme-color/20 scrollbar-track-transparent hover:scrollbar-thumb-theme-color/30 transition-colors duration-300">
+        <div className="border border-subtle rounded-lg py-5 mb-50 bg-main/90 w-full max-h-[calc(100vh-200px)] overflow-y-auto pb-8 scrollbar-thin scrollbar-thumb-theme-color/20 scrollbar-track-transparent hover:scrollbar-thumb-theme-color/30 transition-colors duration-300">
           <script
             type="application/ld+json"
             suppressHydrationWarning

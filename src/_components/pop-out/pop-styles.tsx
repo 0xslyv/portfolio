@@ -14,15 +14,15 @@ export default function PopStyles() {
       mode="click"
       position="right-top"
       trigger={({ onClick }) => (
-        <div
-          className="flex items-center justify-center w-full h-full rounded-full hover:bg-theme-color/10"
-          onClick={onClick}
-        >
-          <Paintbrush size={20} />
-        </div>
+                        <div className="flex items-center justify-center w-full h-full rounded-full gap-1.5 flex-col md:flex-row" onClick={onClick} >
+                    <Paintbrush size={20} />
+                    <span className='text-[10px] md:text-sm font-medium text-primary-text whitespace-nowrap tracking-tight md:tracking-wide'>
+                        {t('Styles')}
+                    </span>
+                </div>
       )}
     >
-      <div className="p-4 bg-main/90 backdrop-blur-lg rounded-lg shadow-lg border border-subtle/50 mb-4">
+      <div className="p-4 bg-main/90 backdrop-blur-lg rounded-lg shadow-lg border border-subtle/50 mb-5">
         <div className="p-4 rounded-md relative">
           <span className="text-secondary-text text-xs mb-3 px-2 block">{t('Light/dark mode')}</span>
           <div onClick={toggleDarkMode}

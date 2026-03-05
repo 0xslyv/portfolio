@@ -4,7 +4,9 @@
     "8WtyrD": "Español",
     "kTt/ND": "Ruso",
     "W3t7Ob": "Japonés",
+    "y1Z3or": "Idioma",
     "eVlu1R": "Seleccionar idioma",
+    "M6hpAz": "Estilos",
     "tCJSxx": "Modo claro/oscuro",
     "Q7dLbA": "Modo claro",
     "hMUQH5": "Modo oscuro",
@@ -14,13 +16,11 @@
     "PsVFRc": "Blog Tecnológico",
     "C7GrE9": "Volver al Blog Personal",
     "hY/J52": "¡Mi blog personal!",
-    "TJ4Smd": "",
+    "TJ4Smd": "Volver",
     "9600U0": "¡Mi blog de tecnología!",
     "itPgxd": "Perfil",
     "UxTJRa": "Proyectos",
-    "tv5FG3": "Blog",
-    "M6hpAz": "Estilos",
-    "y1Z3or": "Idioma"
+    "tv5FG3": "Blog"
   },
   "profile": {
     "X73pdS": "¡Hola!",
@@ -28,6 +28,49 @@
     "Vn76qV": "Github",
     "2wn8UQ": "Blog Personal",
     "PsVFRc": "Blog Tecnológico"
+  },
+  "metadata": {
+    "keywords": {
+      "m3wERc": "proyectos",
+      "MFcgQ4": "portafolio",
+      "+fL/Aj": "desarrollo-de-software",
+      "5yA/V3": "desarrollo-web",
+      "ssIAp5": "programación",
+      "KaXaG3": "codificación",
+      "mS+ElQ": "tecnología",
+      "+gQvgd": "palabra-clave-1",
+      "+PoYfH": "palabra-clave-2",
+      "+qWet0": "blog-personal",
+      "IMPcNU": "pensamientos",
+      "4Yq7U5": "experiencias",
+      "SV6RPR": "historias-de-vida",
+      "/maIgj": "reflexiones",
+      "YPZ7a2": "blog-de-tecnología",
+      "eWElra": "desarrollo",
+      "h+veNu": "tutoriales-tecnológicos",
+      "pL7YAp": "Desarrollador full-stack",
+      "izU0Gm": "React, Next.js, TypeScript"
+    },
+    "iVV5qV": "vmx - Proyectos",
+    "s5n3zG": "Explora mi portafolio de proyectos de desarrollo de software, mostrando varias tecnologías y habilidades de programación",
+    "WgCILz": "vmx - Portafolio de Proyectos",
+    "qSc6ZS": "Portafolio de vmx",
+    "3JuVyk": "vista previa del portafolio de proyectos vmx",
+    "2fh/Ua": "¡Entradas del blog de vmx!",
+    "+BhY5h": "Este es mi pequeño espacio en internet, ¡disfruta tu estancia! ^^",
+    "dB7Rpj": "vmx - Blog",
+    "1xtEDN": "imagen de vista previa del blog vmx",
+    "lzhVq8": "Blog Personal de vmx",
+    "DosGZI": "Pensamientos personales, experiencias e historias de mi viaje a través de la vida y la tecnología",
+    "qV7B2C": "portada del blog personal de vmx",
+    "BHYRpI": "Blog de Tecnología de vmx",
+    "Scc92G": "Artículos técnicos, tutoriales e ideas sobre programación, desarrollo y tendencias tecnológicas",
+    "4voHgP": "portada del blog de tecnología de vmx",
+    "HW6THq": "portafolio de vmx",
+    "FA2sc/": "Desarrollador full-stack creando experiencias interactivas con React, Next.js y TypeScript",
+    "rQB7ZU": "vmx - Portafolio de Desarrollador Full-stack",
+    "BVvvNT": "Portafolio que muestra experiencias web interactivas construidas con tecnologías modernas",
+    "FSTBRK": "imagen de vista previa del portafolio vmx"
   },
   "I5AIev": "Tecnologías Utilizadas",
   "yeEJd4": "Ver Proyecto",
@@ -56,18 +99,6 @@
       "FDNslq": "Recreación del juego Flappy Bird hecho en unity para escritorio",
       "lUbvU/": "Juego de plataforma demo llamado Aura."
     }
-  },
-  "metadata": {
-    "keywords": {
-      "+gQvgd": "palabra-clave-1",
-      "+PoYfH": "palabra-clave-2"
-    },
-    "0DlqN9": "¡Blog de vmx!",
-    "+BhY5h": "Este es mi pequeño espacio en internet, ¡disfruta tu estancia! ^^",
-    "xl217p": "título",
-    "OE94n1": "descripción",
-    "Xstf7k": "texto alternativo",
-    "ejEGdx": "Inicio"
   },
   "home": {
     "UxTJRa": "Proyectos"

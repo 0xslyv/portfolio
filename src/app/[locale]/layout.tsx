@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
@@ -7,53 +6,46 @@ import { routing } from '@/i18n/routing';
 import { getExtracted } from "next-intl/server";
 import { Providers } from "./providers";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const { locale } = await params;
+export async function generateMetadata(): Promise<Metadata> {
   const t = await getExtracted('metadata');
   const t2 = await getExtracted('metadata.keywords');
 
   const keywords = [
-    t2('keyword-1'),
-    t2('keyword-2'),
+    t2('Full-stack developer'),
+    t2('React, Next.js, TypeScript'),
   ];
+
+  const baseUrl = process.env.NODE_ENV === 'production' 
+    ? 'https://0xslyv.space' 
+    : 'http://localhost:3000';
 
   return {
     icons: {
       icon: "../icon.svg",
     },
-    title: t('Home'),
-    description: t('description'),
+    title: t("vmx's portfolio"),
+    description: t('Full-stack developer crafting interactive experiences with React, Next.js, and TypeScript'),
     keywords,
     openGraph: {
-      title: t('title'),
-      description: t('description'),
-      url: `url`,
-      siteName: 'mysite',
+      title: t('vmx - Full-stack Developer Portfolio'),
+      description: t('Portfolio showcasing interactive web experiences built with modern technologies'),
+      url: baseUrl,
+      siteName: "vmx's portfolio",
       type: 'website',
       images: [
         {
-          url: 'imageurl',
+          url: `${baseUrl}/banner-1.png`,
           width: 1200,
           height: 630,
-          alt: t('alt text'),
+          alt: t('vmx portfolio preview image'),
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
-      images: ['imageurl'],
+      title: t('vmx - Full-stack Developer Portfolio'),
+      description: t('Portfolio showcasing interactive web experiences built with modern technologies'),
+      images: [`${baseUrl}/banner-1.png`],
     },
   };
 }

@@ -53,22 +53,13 @@ export function DockWrapper() {
                 className: 'pointer-events-none'
             },
             {
-                icon: (
-                    <PopStyles />
-                ),
-                label: t("Styles"),
-                className: '!p-0'
+                icon: <PopStyles />,
+                className: `hover:bg-theme-color/20`
             },
             {
-                icon: (
-                    <PopLanguage />
-                ),
-                label: t("Language"),
-                className: '!p-0'
+                icon: <PopLanguage />,
+                className: `hover:bg-theme-color/20`
             },]}
-            panelHeight={64}
-            baseItemSize={44}
-            magnification={60}
             className="backdrop-blur-lg"
         />
     )

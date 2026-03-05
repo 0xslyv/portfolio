@@ -3,29 +3,26 @@ import GlareHover from "../layout/glare-effect";
 import Popover from "../layout/pop-over";
 import { FaGithub, FaXTwitter } from "react-icons/fa6";
 import CopyComponent from "../copy-component";
-import { useParams } from "next/navigation";
 import { useExtracted } from "next-intl";
+import Vmx from "../vectors/vmx";
 
 export default function Profile() {
     const t = useExtracted('profile')
-    const params = useParams();
-    const pfpImage = "/images/vmx2f.webp";
     return (
-        <section className="w-full h-full ">
+        <section className="w-full h-screen flex flex-col items-center justify-center overflow-hidden">
+            <div className="max-w-4xl">
             <GlareHover
                 glareOpacity={0.3}
                 glareAngle={-30}
                 glareSize={300}
                 transitionDuration={800}
                 playOnce={false}
-                className="p-8 md:p-10 rounded-sm bg-main/90 w-full flex items-center justify-center"
+                className="p-8 md:p-10 rounded-sm bg-main/50 w-full flex items-center justify-center"
             >
                 <div className='flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 animate-swipe-in'>
-                    <img
-                        className='rounded-full w-40 h-40 md:w-50 md:h-50 border-2 border-theme-color'
-                        src={pfpImage}
-                        alt="vmx's profile picture"
-                    />
+                    <div className="aspect-square w-40 h-40 md:w-50 md:h-50 rounded-full border-2 border-theme-color flex items-center justify-center bg-main/50">
+                        <Vmx className="h-30 w-30 text-main-color"/>
+                    </div>
 
                     <div className='mt-6 md:mt-0 md:ml-8 text-center md:text-left'>
                         <h1 className="text-3xl md:text-4xl font-bold text-primary-text">{t("Hi there!")}</h1>
@@ -92,6 +89,7 @@ export default function Profile() {
                 <a href={`/blog/technology`} className="flex bg-hover/80 p-3 rounded-lg transition-all duration-200 border border-theme-color/30 cursor-pointer hover:bg-theme-color/10 items-center gap-2">
                     <MdArrowOutward className="inline" />{t("Tech Blog")}
                 </a>
+            </div>
             </div>
         </section>
     )

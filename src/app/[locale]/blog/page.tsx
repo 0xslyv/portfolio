@@ -5,7 +5,7 @@ import { MdArrowOutward } from "react-icons/md";
 import Link from "next/link";
 import { useExtracted } from "next-intl";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const t = await getExtracted('metadata');
   const k = await getExtracted('metadata.keywords');
 
@@ -14,30 +14,34 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     k('keyword-2'),
   ];
 
+  const baseUrl = process.env.NODE_ENV === 'production' 
+    ? 'https://0xslyv.space' 
+    : 'http://localhost:3000';
+
   return {
-    title: t(`vmx's Blog!`),
+    title: t(`vmx's Blog Entries!`),
     description: t('This is my small space on the internet, enjoy your stay! ^^'),
     keywords,
     openGraph: {
-      title: t('title'),
-      description: t('description'),
-      url: `url`,
-      siteName: 'mysite',
+      title: t('vmx - Blog'),
+      description: t('This is my small space on the internet, enjoy your stay! ^^'),
+      url: `${baseUrl}/blog`,
+      siteName: "vmx's blog",
       type: 'website',
       images: [
         {
-          url: 'imageurl',
+          url: `${baseUrl}/banner-1.png`,
           width: 1200,
           height: 630,
-          alt: t('alt text'),
+          alt: t('vmx blog preview image'),
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
-      images: ['imageurl'],
+      title: t('vmx - Blog'),
+      description: t('This is my small space on the internet, enjoy your stay! ^^'),
+      images: [`${baseUrl}/banner-1.png`],
     },
   };
 }

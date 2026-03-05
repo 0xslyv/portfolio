@@ -5,39 +5,42 @@ import { MdArrowOutward } from "react-icons/md";
 import Link from "next/link";
 import { useExtracted } from "next-intl";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const t = await getExtracted('metadata');
   const k = await getExtracted('metadata.keywords');
 
   const keywords = [
-    k('keyword-1'),
-    k('keyword-2'),
+    k('personal-blog'),
+    k('thoughts'),
+    k('experiences'),
+    k('life-stories'),
+    k('reflections')
   ];
 
   return {
-    title: t(`vmx's Blog!`),
-    description: t('This is my small space on the internet, enjoy your stay! ^^'),
+    title: t("vmx's Personal Blog"),
+    description: t('Personal thoughts, experiences, and stories from my journey through life and technology'),
     keywords,
     openGraph: {
-      title: t('title'),
-      description: t('description'),
-      url: `url`,
-      siteName: 'mysite',
+      title: t("vmx's Personal Blog"),
+      description: t('Personal thoughts, experiences, and stories from my journey through life and technology'),
+      url: '/blog/personal',
+      siteName: "vmx's Portfolio",
       type: 'website',
       images: [
         {
-          url: 'imageurl',
+          url: '/images/banner-1.png',
           width: 1200,
           height: 630,
-          alt: t('alt text'),
+          alt: t('vmx personal blog cover'),
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
-      images: ['imageurl'],
+      title: t("vmx's Personal Blog"),
+      description: t('Personal thoughts, experiences, and stories from my journey through life and technology'),
+      images: ['/images/banner-1.png'],
     },
   };
 }

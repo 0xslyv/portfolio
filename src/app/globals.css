@@ -61,7 +61,6 @@
 @layer base {
   body {
     @apply bg-main text-primary-text transition-colors duration-500 px-2 md:px-10 md:mx-20;
-    -webkit-tap-highlight-color: transparent;
     @apply bg-background text-foreground;
   }
 }

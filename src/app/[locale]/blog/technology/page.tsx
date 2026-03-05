@@ -5,39 +5,42 @@ import { MdArrowOutward } from "react-icons/md";
 import Link from "next/link";
 import { useExtracted } from "next-intl";
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+export async function generateMetadata(): Promise<Metadata> {
   const t = await getExtracted('metadata');
   const k = await getExtracted('metadata.keywords');
 
   const keywords = [
-    k('keyword-1'),
-    k('keyword-2'),
+    k('technology-blog'),
+    k('programming'),
+    k('development'),
+    k('tech-tutorials'),
+    k('coding')
   ];
 
   return {
-    title: t(`vmx's Blog!`),
-    description: t('This is my small space on the internet, enjoy your stay! ^^'),
+    title: t("vmx's Technology Blog"),
+    description: t('Technical articles, tutorials, and insights about programming, development, and technology trends'),
     keywords,
     openGraph: {
-      title: t('title'),
-      description: t('description'),
-      url: `url`,
-      siteName: 'mysite',
+      title: t("vmx's Technology Blog"),
+      description: t('Technical articles, tutorials, and insights about programming, development, and technology trends'),
+      url: '/blog/technology',
+      siteName: "vmx's Portfolio",
       type: 'website',
       images: [
         {
-          url: 'imageurl',
+          url: '/images/banner-1.png',
           width: 1200,
           height: 630,
-          alt: t('alt text'),
+          alt: t('vmx technology blog cover'),
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: t('title'),
-      description: t('description'),
-      images: ['imageurl'],
+      title: t("vmx's Technology Blog"),
+      description: t('Technical articles, tutorials, and insights about programming, development, and technology trends'),
+      images: ['/images/banner-1.png'],
     },
   };
 }
@@ -58,7 +61,7 @@ export default function Page() {
         </div>
         
         <div className="animate-swipe-in border border-subtle bg-background rounded-lg py-5 mb-50 bg-main/90 w-full max-h-[calc(100vh-200px)] overflow-y-auto pb-8 scrollbar-thin scrollbar-thumb-theme-color/20 scrollbar-track-transparent hover:scrollbar-thumb-theme-color/30 transition-colors duration-300">
-          <div className="overflow-hidden">
+          <div className="">
             <BlogPosts route="technology" />
           </div>
         </div>

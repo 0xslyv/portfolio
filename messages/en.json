@@ -4,7 +4,9 @@
     "8WtyrD": "Spanish",
     "kTt/ND": "Russian",
     "W3t7Ob": "Japanese",
+    "y1Z3or": "Language",
     "eVlu1R": "Select language",
+    "M6hpAz": "Styles",
     "tCJSxx": "Light/dark mode",
     "Q7dLbA": "Light mode",
     "hMUQH5": "Dark mode",
@@ -18,9 +20,7 @@
     "9600U0": "My technology blog!",
     "itPgxd": "Profile",
     "UxTJRa": "Projects",
-    "tv5FG3": "Blog",
-    "M6hpAz": "Styles",
-    "y1Z3or": "Language"
+    "tv5FG3": "Blog"
   },
   "profile": {
     "X73pdS": "Hi there!",
@@ -28,6 +28,49 @@
     "Vn76qV": "Github",
     "2wn8UQ": "Personal Blog",
     "PsVFRc": "Tech Blog"
+  },
+  "metadata": {
+    "keywords": {
+      "m3wERc": "projects",
+      "MFcgQ4": "portfolio",
+      "+fL/Aj": "software-development",
+      "5yA/V3": "web-development",
+      "ssIAp5": "programming",
+      "KaXaG3": "coding",
+      "mS+ElQ": "technology",
+      "+gQvgd": "keyword-1",
+      "+PoYfH": "keyword-2",
+      "+qWet0": "personal-blog",
+      "IMPcNU": "thoughts",
+      "4Yq7U5": "experiences",
+      "SV6RPR": "life-stories",
+      "/maIgj": "reflections",
+      "YPZ7a2": "technology-blog",
+      "eWElra": "development",
+      "h+veNu": "tech-tutorials",
+      "pL7YAp": "Full-stack developer",
+      "izU0Gm": "React, Next.js, TypeScript"
+    },
+    "iVV5qV": "vmx - Projects",
+    "s5n3zG": "Explore my portfolio of software development projects, showcasing various technologies and programming skills",
+    "WgCILz": "vmx - Projects Portfolio",
+    "qSc6ZS": "vmx's Portfolio",
+    "3JuVyk": "vmx projects portfolio preview",
+    "2fh/Ua": "vmx's Blog Entries!",
+    "+BhY5h": "This is my small space on the internet, enjoy your stay! ^^",
+    "dB7Rpj": "vmx - Blog",
+    "1xtEDN": "vmx blog preview image",
+    "lzhVq8": "vmx's Personal Blog",
+    "DosGZI": "Personal thoughts, experiences, and stories from my journey through life and technology",
+    "qV7B2C": "vmx personal blog cover",
+    "BHYRpI": "vmx's Technology Blog",
+    "Scc92G": "Technical articles, tutorials, and insights about programming, development, and technology trends",
+    "4voHgP": "vmx technology blog cover",
+    "HW6THq": "vmx's portfolio",
+    "FA2sc/": "Full-stack developer crafting interactive experiences with React, Next.js, and TypeScript",
+    "rQB7ZU": "vmx - Full-stack Developer Portfolio",
+    "BVvvNT": "Portfolio showcasing interactive web experiences built with modern technologies",
+    "FSTBRK": "vmx portfolio preview image"
   },
   "I5AIev": "Technologies Used",
   "yeEJd4": "View Project",
@@ -56,18 +99,6 @@
       "FDNslq": "Recreation of the game Flappy Bird made on unity for desktop",
       "lUbvU/": "Demo platformer game called Aura."
     }
-  },
-  "metadata": {
-    "keywords": {
-      "+gQvgd": "keyword-1",
-      "+PoYfH": "keyword-2"
-    },
-    "0DlqN9": "vmx's Blog!",
-    "+BhY5h": "This is my small space on the internet, enjoy your stay! ^^",
-    "xl217p": "title",
-    "OE94n1": "description",
-    "Xstf7k": "alt text",
-    "ejEGdx": "Home"
   },
   "home": {
     "UxTJRa": "Projects"

@@ -7,6 +7,50 @@ import Modal from "../layout/modal";
 import { useProjectsData, type Project } from "../../_constants/projects";
 import { useExtracted } from "next-intl";
 import { techNameMap } from "../../_constants/tech-mappings";
+import { Metadata } from "next";
+
+// Metadata export for SEO
+export async function generateMetadata(): Promise<Metadata> {
+  const t = useExtracted('metadata');
+  const k = useExtracted('metadata.keywords');
+
+  const keywords = [
+    k('projects'),
+    k('portfolio'),
+    k('software-development'),
+    k('web-development'),
+    k('programming'),
+    k('coding'),
+    k('technology')
+  ];
+
+  return {
+    title: t("vmx - Projects"),
+    description: t('Explore my portfolio of software development projects, showcasing various technologies and programming skills'),
+    keywords,
+    openGraph: {
+      title: t("vmx - Projects Portfolio"),
+      description: t('Explore my portfolio of software development projects, showcasing various technologies and programming skills'),
+      url: "/projects",
+      siteName: t("vmx's Portfolio"),
+      type: 'website',
+      images: [
+        {
+          url: '/images/banner-1.png',
+          width: 1200,
+          height: 630,
+          alt: t('vmx projects portfolio preview'),
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t("vmx - Projects Portfolio"),
+      description: t('Explore my portfolio of software development projects, showcasing various technologies and programming skills'),
+      images: ['/images/banner-1.png'],
+    },
+  };
+}
 
 const Projects = () => {
   const projects = useProjectsData();

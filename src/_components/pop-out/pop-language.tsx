@@ -42,15 +42,15 @@ export default function PopLanguage() {
             position="right-top"
             onOpenChange={setIsLanguageOpen}
             trigger={({ onClick }) => (
-                <div
-                    className="flex items-center justify-center w-full h-full rounded-full hover:bg-theme-color/10"
-                    onClick={onClick}
-                >
+                <div className="flex items-center justify-center w-full h-full rounded-full gap-1.5 flex-col md:flex-row" onClick={onClick} >
                     <Languages size={20} />
+                    <span className='text-[10px] md:text-sm font-medium text-primary-text whitespace-nowrap tracking-tight md:tracking-wide'>
+                        {t('Language')}
+                    </span>
                 </div>
             )}
         >
-            <div className="p-4 bg-main/90 backdrop-blur-lg rounded-lg shadow-lg border border-subtle/50 mb-4">
+            <div className="p-4 bg-main/90 backdrop-blur-lg rounded-lg shadow-lg border border-subtle mb-5">
                 <div className="p-2 rounded-md min-w-[150px]">
                     <span className="text-secondary-text text-xs mb-2 px-2 block">{t('Select language')}</span>
                     <div className="flex flex-col gap-1">
